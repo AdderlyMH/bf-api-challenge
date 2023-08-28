@@ -57,4 +57,8 @@ public class StepDefinition extends Utility {
         assertEquals(getJsonPath(response, fieldName), fieldValue);
     }
 
+    @Given("a payload file named {string}")
+    public void aPayloadFileNamed(String fileName) throws IOException {
+        payloadReq = given().spec(requestSpecification()).body(testData.addPetFile(fileName));
+    }
 }

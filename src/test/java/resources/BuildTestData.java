@@ -4,6 +4,9 @@ import pojo.Category;
 import pojo.Pet;
 import pojo.Tag;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +38,10 @@ public class BuildTestData {
 
         return pet;
 
+    }
+
+    public String addPetFile(String fileName) throws IOException {
+        return new String(Files.readAllBytes(Paths.get("src/main/resources/" + fileName + ".json")));
     }
 
 }

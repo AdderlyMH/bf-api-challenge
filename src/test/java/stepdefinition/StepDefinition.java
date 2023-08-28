@@ -45,6 +45,8 @@ public class StepDefinition extends Utility {
             response = payloadReq.when().post().then().spec(baseResp).extract().response();
         else if (requestType.equalsIgnoreCase("GET"))
             response = payloadReq.when().get(pet_id).then().spec(baseResp).extract().response();
+        else if (requestType.equalsIgnoreCase("PUT"))
+            response = payloadReq.when().put().then().spec(baseResp).extract().response();
 
     }
 
@@ -67,6 +69,11 @@ public class StepDefinition extends Utility {
     @Given("a previously created pet")
     public void aPreviouslyCreatedPet() throws IOException {
         payloadReq = given().spec(requestSpecification());
+    }
+
+    @Given("a string payload")
+    public void aStringPayload() throws IOException {
+        payloadReq = given().spec(requestSpecification()).body(testData.updatePetPayload(pet_id));
     }
 
 }

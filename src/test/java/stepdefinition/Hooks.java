@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Hooks {
 
-    @Before("@FindPet")
+    @Before("@FindPet or @UpdatePet")
     public void beforeScenario() throws IOException {
 
         StepDefinition sd = new StepDefinition();

@@ -1,4 +1,4 @@
-# Baufest API challenge
+# API automation challenge
 
 Este es un repositorio que contiene el proyecto bf-api-challenge. Este proyecto es un desafío API y puede contener código, recursos y archivos que inclyen:
 
@@ -52,7 +52,7 @@ Es posible ejecutar las pruebas de distintas formas:
    target/jsonReports/cucumber-report.json
    ```
 
-2. Vía comando en el terminal usando un perfil. Existe un perfil nombrado *Regression* dentro del proyecto que se puede ejecutar con el siguiente comando:
+2. Vía terminal ejecutando el siguiente comando:
 
    ```bash
    mvn verify
